@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Editor</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/85858dde4b.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h2>MY TEXT EDITOR PROJECT:</h2>
+      </div>
+    </header>
+
+    <main>
+      <section class="">
+        <div
+          class="bg-sky-300 md:w-9/12 h-[812px] mx-auto mt-8 rounded text-center"
+        >
+          <div>
+            <h3 class="text-2xl font-semibold p-1 lg:p-3 py-3">
+              My Text Editor
+            </h3>
+          </div>
+          <div
+            class="mx-2 md:w-9/12 h-fit py-2 bg-sky-200 border-2 border-black md:mx-auto"
+          >
+            <div class="py-2 px-4 flex justify-between md:px-4">
+              <div class="flex flex-col lg:grid grid-cols-4 gap-3 lg:px-8">
+                <span
+                  id="btn-bold"
+                  class="hover:bg-sky-500 cursor-pointer rounded-sm p-1"
+                  ><i class="fa-solid fa-bold"></i
+                ></span>
+                <span
+                  id="btn-italic"
+                  class="hover:bg-sky-500 cursor-pointer rounded-sm p-1"
+                  ><i class="fa-solid fa-italic"></i
+                ></span>
+                <span
+                  id="btn-underline"
+                  class="hover:bg-sky-500 cursor-pointer rounded-sm p-1"
+                  ><i class="fa-solid fa-underline"></i
+                ></span>
+              </div>
+              <div class="grid grid-cols-4 gap-4 max-lg:mt-10 lg:px-8">
+                <span
+                  id="btn-align-left"
+                  class="hover:bg-sky-500 cursor-pointer rounded-sm p-1"
+                  ><i class="fa-solid fa-align-left"></i
+                ></span>
+                <span
+                  id="btn-align-center"
+                  class="hover:bg-sky-500 cursor-pointer rounded-sm p-1"
+                  ><i class="fa-solid fa-align-center"></i
+                ></span>
+                <span
+                  id="btn-align-right"
+                  class="hover:bg-sky-500 cursor-pointer rounded-sm p-1"
+                  ><i class="fa-solid fa-align-right"></i
+                ></span>
+                <span
+                  id="btn-align-justify"
+                  class="hover:bg-sky-500 cursor-pointer rounded-sm p-1"
+                  ><i class="fa-solid fa-align-justify"></i
+                ></span>
+              </div>
+              <div class="flex flex-col lg:grid grid-cols-3 gap-3 lg:px-8">
+                <span>
+                  <input
+                    id="change-font-size"
+                    type="number"
+                    value="16"
+                    onchange="colorStyle('change-font-size')"
+                    class="cursor-pointer p-1 w-12 rounded-lg bg-blue-300 border-2 outline-white"
+                  />
+                </span>
+                <span
+                  id="btn-to-upper-case"
+                  class="hover:bg-sky-500 cursor-pointer rounded-sm p-1"
+                  >aA</span
+                >
+                <span>
+                  <input
+                    class="w-10"
+                    type="color"
+                    id="favcolor"
+                    onchange="colorStyle('favcolor')"
+                    name="favcolor"
+                    value="#ff0000"
+                  />
+                </span>
+              </div>
+            </div>
+            <div>
+              <textarea
+                name="text"
+                id="text-area"
+                class="ck p-4 w-[90vw] h-[65vh] focus:outline-none md:w-[50vw]"
+                cols="91"
+                rows="10"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./js/ms-word-lite.js"></script>
+  </body>
+</html>
